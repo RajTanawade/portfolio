@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Reneq case study — Raj Tanawade. Sports equipment rental and sports club services platform.">
+  <title>Reneq — Sports Equipment Rental &amp; Club Services · Raj Tanawade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="case.css">
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body class="case-page">
+  <header class="home-header">
+    <a class="wordmark" href="index.html">RT<span>.</span></a>
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">How I think</a>
+      <a href="index.html#side-quests">Side quests</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle light and dark mode" title="Toggle light/dark theme">
+        <span class="toggle-track">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <span class="toggle-thumb"></span>
+        </span>
+      </button>
+      <a class="header-contact" href="index.html#contact">Contact me</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero shell">
+      <a class="back-link" href="index.html#work">← Selected work</a>
+      <p class="kicker">UX Case Study · Sports Rental &amp; Club Services · Mobile App</p>
+      <h1>Reneq — Access sports equipment &amp; club services on demand.</h1>
+      <p class="case-lede">RENEQ is a dedicated platform for sports enthusiasts. Easily borrow rental sports equipment delivered directly to your home, and enjoy hassle-free booking of club services for sports events.</p>
+      <dl class="case-meta">
+        <div><dt>Duration</dt><dd>12 weeks</dd></div>
+        <div><dt>Output</dt><dd>25+ screens</dd></div>
+        <div><dt>Target Audience</dt><dd>Age 23–35</dd></div>
+        <div><dt>Scope</dt><dd>Research → UI → Prototype</dd></div>
+        <div><dt>Role</dt><dd>End-to-End Product Designer</dd></div>
+      </dl>
+    </section>
+
+    <nav class="case-nav" aria-label="Case study sections">
+      <a href="#overview">Overview</a>
+      <a href="#problem">Problem</a>
+      <a href="#process">Process</a>
+      <a href="#research">Research</a>
+      <a href="#competition">Competitors</a>
+      <a href="#persona">Persona</a>
+      <a href="#journey">Journey</a>
+      <a href="#ia">Card Sorting</a>
+      <a href="#flows">User Flow</a>
+      <a href="#wireframes">Wireframes</a>
+      <a href="#brand">Brand &amp; System</a>
+      <a href="#ui">Final UI</a>
+    </nav>
+
+    <!-- 01 OVERVIEW -->
+    <section id="overview" class="case-block shell">
+      <p class="kicker">01 · Overview &amp; Context</p>
+      <div class="case-split">
+        <h2>Why Reneq? A change in everyday life &amp; the access gap.</h2>
+        <div>
+          <p>Due to busy city lives, people often neglect the physical activity their bodies need. Work-from-home settings saved commute hours that could be invested in playing sports with family and friends at home.</p>
+          <p>However, not everyone owns sports equipment for casual play. Buying an entire kit for occasional use feels wasteful, creating the need for a dedicated rental platform.</p>
+        </div>
+      </div>
+
+      <blockquote class="quote-banner" style="margin-top:32px">
+        Why Reneq? People who casually feel the need for borrowing rented sports equipment need a platform that can serve the purpose.
+      </blockquote>
+    </section>
+
+    <!-- 02 PROBLEM -->
+    <section id="problem" class="case-block shell">
+      <p class="kicker">02 · The Problem</p>
+      <div class="case-split">
+        <h2>Untimely sports urges vs. lack of equipment.</h2>
+        <div>
+          <p>Sports enthusiasts find it difficult to fulfill a sudden urge to play when they have no equipment at home. Searching online for far-away local stores without delivery options often leads to annoyance—and dropping plans to stick back to screens all day.</p>
+        </div>
+      </div>
+
+      <div class="role-grid" style="grid-template-columns:repeat(3,1fr);margin-top:32px">
+        <article>
+          <h3>Target User</h3>
+          <p>Adults aged 23–35 with a sedentary lifestyle who feel the urge to indulge in sports during free time.</p>
+        </article>
+        <article>
+          <h3>Core Needs</h3>
+          <p>Borrow equipment on rent for occasional play without full ownership; easily book sports event services.</p>
+        </article>
+        <article>
+          <h3>Key Insights</h3>
+          <p>Club membership benefits avoid idle equipment costs while serving workplace or residential society events.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 03 PROCESS -->
+    <section id="process" class="case-block shell">
+      <p class="kicker">03 · 12-Week Design Process</p>
+      <div class="case-split">
+        <h2>End-to-end UX methodology.</h2>
+        <div>
+          <p>The work followed a structured 12-week design process spanning Discover, Define/Ideate, Develop, and Deliver phases.</p>
+        </div>
+      </div>
+
+      <table class="role-table" style="margin-top:24px">
+        <thead>
+          <tr><th>Stage</th><th>Activities Documented</th><th>Timeline</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Discover</td><td>Brainstorming, User &amp; Stakeholder Research, Competitor Analysis</td><td>Weeks 01–04</td></tr>
+          <tr><td>Define / Ideate</td><td>User Persona, Customer Journey Map, Card Sorting, User Flow, Low-Fidelity Wireframes</td><td>Weeks 04–07</td></tr>
+          <tr><td>Develop</td><td>High-Fidelity Wireframes, Visual Design, Content / Text Strings, Interactive Prototyping</td><td>Weeks 07–10</td></tr>
+          <tr><td>Deliver</td><td>Usability Testing, Design Updates, Asset Handoff</td><td>Weeks 11–12</td></tr>
+        </tbody>
+      </table>
+
+      <div class="impact-strip" style="margin-top:32px">
+        <article>
+          <strong>12 Wks</strong>
+          <p>End-to-end design cycle from discovery through high-fidelity handoff</p>
+        </article>
+        <article>
+          <strong>25+</strong>
+          <p>Mobile app screens designed and prototyped across member &amp; instructor roles</p>
+        </article>
+        <article>
+          <strong>2 Flows</strong>
+          <p>Dual core paths: Equipment Rental Delivery and Club Event Service Booking</p>
+        </article>
+        <article>
+          <strong>1 System</strong>
+          <p>Cohesive brand identity, typography, color palette &amp; UI component library</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 04 RESEARCH -->
+    <section id="research" class="case-block shell">
+      <p class="kicker">04 · User Research</p>
+      <div class="case-split">
+        <h2>Uncovering real user needs.</h2>
+        <div>
+          <p>User research was conducted through structured online surveys focused on frequency of play, equipment availability, rental duration expectations, and interest in club services.</p>
+        </div>
+      </div>
+
+      <div class="impact-strip" style="margin-top:32px">
+        <article>
+          <strong>90.9%</strong>
+          <p>Preferred a mobile app over a desktop website</p>
+        </article>
+        <article>
+          <strong>72.7%</strong>
+          <p>Felt the need to learn a new sport or excel in a known sport</p>
+        </article>
+        <article>
+          <strong>63.6%</strong>
+          <p>Would borrow rental equipment when gathering with friends in free time</p>
+        </article>
+        <article>
+          <strong>63.6%</strong>
+          <p>Struggled to find professional organizers for office/society sports events</p>
+        </article>
+      </div>
+
+      <div class="role-grid" style="grid-template-columns:repeat(3,1fr);margin-top:32px">
+        <article>
+          <h3>Casual Access Matters</h3>
+          <p>Users prefer rental as a practical alternative to buying an expensive complete sports kit for occasional use.</p>
+        </article>
+        <article>
+          <h3>Learning is Essential</h3>
+          <p>Opportunity extends beyond hardware: users want coaching, scheduled batches, and skill improvement.</p>
+        </article>
+        <article>
+          <h3>Events are Underserved</h3>
+          <p>Significant demand to connect club infrastructure and professional referees with corporate or society tournaments.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 05 COMPETITORS -->
+    <section id="competition" class="case-block shell">
+      <p class="kicker">05 · Competitor Analysis</p>
+      <div class="case-split">
+        <h2>Evaluating fragmented solutions.</h2>
+        <div>
+          <p>Analyzing existing platforms revealed gaps between general rental services and specialized sports club management.</p>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;margin-top:24px">
+        <table class="role-table">
+          <thead>
+            <tr><th>Competitor</th><th>Features</th><th>Strength</th><th>Weakness</th><th>Opportunity Identified</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Sporthood</strong></td>
+              <td>Sports club booking</td>
+              <td>'Play' feature connects users seeking game partners</td>
+              <td>Limited to Kochi &amp; Bangalore; missing booking CTA</td>
+              <td>Build a fully functional booking flow for individual activities</td>
+            </tr>
+            <tr>
+              <td><strong>Jolly Friends</strong></td>
+              <td>Scores &amp; tournaments</td>
+              <td>Live scoreboards for tournaments</td>
+              <td>No interface to book event services</td>
+              <td>Provide dedicated event service booking interfaces</td>
+            </tr>
+            <tr>
+              <td><strong>Rent Pe</strong></td>
+              <td>General item rentals</td>
+              <td>Established peer borrowing system</td>
+              <td>No specific sports equipment categorization</td>
+              <td>Create a dedicated sports equipment category with filters</td>
+            </tr>
+            <tr>
+              <td><strong>Enterprise Club</strong></td>
+              <td>Session bookings</td>
+              <td>Flexible slot selection after acquiring membership</td>
+              <td>Slots frequently unavailable</td>
+              <td>Provide automated notifications whenever slots open up</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 06 PERSONA -->
+    <section id="persona" class="case-block shell">
+      <p class="kicker">06 · User Persona</p>
+      <div class="case-split">
+        <h2>Amit Singh — The Sports Enthusiast</h2>
+        <p>A software engineer seeking active leisure time without the burden of equipment ownership.</p>
+      </div>
+
+      <div class="persona-dark-card">
+        <div class="persona-profile">
+          <span class="role">SPORTS ENTHUSIAST</span>
+          <h3>Amit Singh</h3>
+          <p style="color:var(--muted);font-size:13px;margin-bottom:16px">Age 28 · Software Developer · Pune, India</p>
+          <p style="font-size:13px;line-height:1.6">Feels trapped by long sedentary working hours. Eager to play badminton with friends and family during weekends, but buying a full kit feels wasteful for occasional play.</p>
+          <blockquote style="margin-top:20px;padding-left:12px;border-left:2px solid #38d5b0;color:#38d5b0;font-size:14px">
+            "I want to find rental sports equipment online &amp; get it home-delivered whenever needed."
+          </blockquote>
+        </div>
+
+        <div class="role-grid" style="grid-template-columns:1fr 1fr;margin-top:0">
+          <article>
+            <h3>Daily Routine</h3>
+            <p>Work long hours at desk → Rush home drained → Spend free time on screens → Miss playing sports.</p>
+          </article>
+          <article>
+            <h3>Goals &amp; Needs</h3>
+            <p>Play badminton regularly; rent quality equipment on demand; spend active time with family.</p>
+          </article>
+          <article>
+            <h3>Frustrations</h3>
+            <p>Sedentary weight gain; dislike traveling far to local shops after work; high cost of buying full kits.</p>
+          </article>
+          <article>
+            <h3>Ideal Solution</h3>
+            <p>Mobile app to select sports equipment, specify rental duration, and receive home delivery within hours.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 JOURNEY -->
+    <section id="journey" class="case-block shell">
+      <p class="kicker">07 · Customer Journey Map</p>
+      <div class="case-split">
+        <h2>From frustration to a successful rental.</h2>
+        <p>Tracing Amit's experience across 7 key stages of interaction.</p>
+      </div>
+
+      <div style="overflow-x:auto;margin-top:24px">
+        <table class="role-table">
+          <thead>
+            <tr><th>Stage</th><th>User Action</th><th>Thoughts</th><th>Emotion</th><th>UX Opportunity</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Awareness</strong></td>
+              <td>Feels sudden urge to play; local shops require buying full kit.</td>
+              <td>"Sedentary life is making me unfit... I need equipment."</td>
+              <td>Frustrated</td>
+              <td>Highlight rental convenience across social media channels.</td>
+            </tr>
+            <tr>
+              <td><strong>2. Discovery</strong></td>
+              <td>Searches online for equipment rental services.</td>
+              <td>"Where can I find rental equipment with delivery?"</td>
+              <td>Hopeful</td>
+              <td>Provide clear onboarding value propositions.</td>
+            </tr>
+            <tr>
+              <td><strong>3. Onboarding</strong></td>
+              <td>Downloads Reneq, signs up via phone/Google.</td>
+              <td>"Is this app easy to use?"</td>
+              <td>Expectant</td>
+              <td>Allow catalog exploration before requiring membership.</td>
+            </tr>
+            <tr>
+              <td><strong>4. Membership</strong></td>
+              <td>Explores 3, 6, 12 month membership perks &amp; discounts.</td>
+              <td>"Can I get coaching and club access too?"</td>
+              <td>Interested</td>
+              <td>Transparently list membership perks &amp; trial benefits.</td>
+            </tr>
+            <tr>
+              <td><strong>5. Rental</strong></td>
+              <td>Selects Badminton → Rackets &amp; shuttlecocks → Duration.</td>
+              <td>"How simple is the delivery &amp; checkout?"</td>
+              <td>Confident</td>
+              <td>Streamlined multi-step form with upfront price breakdowns.</td>
+            </tr>
+            <tr>
+              <td><strong>6. Delivery &amp; Use</strong></td>
+              <td>Receives home delivery and plays with family.</td>
+              <td>"I did it! Borrowing equipment is hassle-free."</td>
+              <td>Ecstatic</td>
+              <td>Real-time delivery tracking &amp; post-play reviews.</td>
+            </tr>
+            <tr>
+              <td><strong>7. Return / Renewal</strong></td>
+              <td>Gets expiry notification; extends rental or schedules pickup.</td>
+              <td>"So easy! Reneq saved my weekend."</td>
+              <td>Satisfied</td>
+              <td>1-click rental extension or scheduled return pickup.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 08 CARD SORTING -->
+    <section id="ia" class="case-block shell">
+      <p class="kicker">08 · Content Hierarchy &amp; Card Sorting</p>
+      <div class="case-split">
+        <h2>Structuring the app architecture.</h2>
+        <div>
+          <p>Card sorting organized topics into six intuitive main navigation pillars: Onboarding, Learning, Sports, Services, Home, and Support.</p>
+        </div>
+      </div>
+
+      <div class="sort-board">
+        <div class="sort-grid">
+          <div class="sort-col">
+            <div class="sort-head">Onboarding</div>
+            <div class="sort-card">Splash &amp; Welcome</div>
+            <div class="sort-card">Register / Login</div>
+            <div class="sort-card">Personal Info</div>
+            <div class="sort-card green">Member Profile</div>
+            <div class="sort-card">30-day Trial</div>
+            <div class="sort-card green">Instructor Profile</div>
+            <div class="sort-card">Choice of Sport</div>
+          </div>
+          <div class="sort-col">
+            <div class="sort-head">Learning</div>
+            <div class="sort-card">Rules &amp; Regulations</div>
+            <div class="sort-card">Basic Tutorials</div>
+            <div class="sort-card">Equipment Lists</div>
+            <div class="sort-card">Usage Guidelines</div>
+            <div class="sort-card">Rental Charges</div>
+          </div>
+          <div class="sort-col">
+            <div class="sort-head">Sports</div>
+            <div class="sort-sub">Outdoor</div>
+            <div class="sort-card">Lawn Tennis</div>
+            <div class="sort-card">Badminton</div>
+            <div class="sort-card">Cricket</div>
+            <div class="sort-sub">Indoor</div>
+            <div class="sort-card">Table Tennis</div>
+            <div class="sort-card">Chess &amp; Carrom</div>
+          </div>
+          <div class="sort-col">
+            <div class="sort-head">Services</div>
+            <div class="sort-card">Equipment Rental</div>
+            <div class="sort-card">Event Club Booking</div>
+            <div class="sort-card">Corporate Discounts</div>
+            <div class="sort-card">Free Home Delivery</div>
+            <div class="sort-card">Fitcoins Rewards</div>
+          </div>
+          <div class="sort-col">
+            <div class="sort-head">Home</div>
+            <div class="sort-card">Instructor Suggestions</div>
+            <div class="sort-card">Scheduled Batches</div>
+            <div class="sort-card">Daily Reminders</div>
+            <div class="sort-card">Progress Tracker</div>
+            <div class="sort-card green">Level-up Tips</div>
+            <div class="sort-card">Mentor Chat</div>
+          </div>
+          <div class="sort-col">
+            <div class="sort-head">Support</div>
+            <div class="sort-card">Feedback &amp; Rating</div>
+            <div class="sort-card">Help Center</div>
+            <div class="sort-card">Rental Extensions</div>
+            <div class="sort-card">Return Schedule</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 USER FLOW -->
+    <section id="flows" class="case-block shell">
+      <p class="kicker">09 · User Flow Architecture</p>
+      <div class="case-split">
+        <h2>Full swimlane user flow.</h2>
+        <div>
+          <p>Interlinked swimlanes map the end-to-end paths across five core domains: Login, Membership, Instructor, Rental Equipment, and Club Services.</p>
+        </div>
+      </div>
+
+      <!-- FULL SVG SWIMLANE USER FLOW -->
+      <div class="flow-canvas-dark">
+        <svg viewBox="0 0 1700 1120" role="img" aria-label="Reneq interlinked swimlane user flow">
+          <defs>
+            <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L7,3.5 L0,7 z" fill="#e75e32"/>
+            </marker>
+          </defs>
+
+          <!-- Swimlane Backgrounds -->
+          <rect x="0" y="0" width="1700" height="175" fill="#1c232d"/>
+          <rect x="0" y="175" width="1700" height="205" fill="#14181f"/>
+          <rect x="0" y="380" width="1700" height="180" fill="#1c232d"/>
+          <rect x="0" y="560" width="1700" height="300" fill="#14181f"/>
+          <rect x="0" y="860" width="1700" height="260" fill="#1c232d"/>
+          <g stroke="#2a3340" stroke-width="1">
+            <line x1="150" y1="0" x2="150" y2="1120"/>
+            <line x1="0" y1="175" x2="1700" y2="175"/>
+            <line x1="0" y1="380" x2="1700" y2="380"/>
+            <line x1="0" y1="560" x2="1700" y2="560"/>
+            <line x1="0" y1="860" x2="1700" y2="860"/>
+          </g>
+
+          <!-- Lane Titles -->
+          <g font-family="DM Mono, monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">
+            <rect x="0" y="0" width="150" height="175" fill="#2f77c8"/><text x="75" y="92" transform="rotate(-90 75 92)">LOGIN</text>
+            <rect x="0" y="175" width="150" height="205" fill="#67b53f"/><text x="75" y="278" transform="rotate(-90 75 278)">MEMBERSHIP</text>
+            <rect x="0" y="380" width="150" height="180" fill="#7b4aa8"/><text x="75" y="470" transform="rotate(-90 75 470)">INSTRUCTOR</text>
+            <rect x="0" y="560" width="150" height="300" fill="#ef6a60"/><text x="75" y="710" transform="rotate(-90 75 710)">RENTAL EQUIPMENT</text>
+            <rect x="0" y="860" width="150" height="260" fill="#b31235"/><text x="75" y="990" transform="rotate(-90 75 990)">CLUB &amp; SERVICES</text>
+          </g>
+
+          <g font-family="DM Sans, sans-serif" font-size="10" fill="#f4efe8" text-anchor="middle">
+            <!-- LOGIN -->
+            <rect x="185" y="58" width="120" height="42" rx="21" fill="#2a3340" stroke="#4b5666"/>
+            <text x="245" y="76"><tspan x="245">Splash / Welcome</tspan><tspan x="245" dy="12">Screens</tspan></text>
+            <polygon points="355,79 405,50 455,79 405,108" fill="#14181f" stroke="#e75e32"/>
+            <text x="405" y="76" fill="#e75e32" font-weight="700">Existing</text><text x="405" y="88" fill="#e75e32" font-weight="700">User?</text>
+            <rect x="490" y="40" width="120" height="48" rx="7" fill="#2a3340" stroke="#4b5666"/>
+            <text x="550" y="61"><tspan x="550">Register</tspan><tspan x="550" dy="12">(Member / Instructor)</tspan></text>
+            <rect x="640" y="40" width="100" height="48" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="690" y="68">Personal Info</text>
+            <rect x="770" y="40" width="100" height="48" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="820" y="68">Privacy Policy</text>
+            <rect x="900" y="40" width="120" height="48" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="960" y="61"><tspan x="960">New User</tspan><tspan x="960" dy="12">Account Activation</tspan></text>
+            <rect x="1050" y="40" width="110" height="48" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="1105" y="68">Email Verification</text>
+            <rect x="1190" y="40" width="110" height="48" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="1245" y="68">Account Activated</text>
+            <circle cx="1340" cy="64" r="14" fill="#14181f" stroke="#e75e32"/>
+            <rect x="1375" y="40" width="105" height="48" rx="24" fill="#2f77c8"/><text x="1427" y="60" fill="#fff" font-weight="700"><tspan x="1427">Login</tspan><tspan x="1427" dy="12">(Username &amp; Password)</tspan></text>
+
+            <!-- MEMBERSHIP -->
+            <polygon points="185,270 225,245 265,270 225,295" fill="#14181f" stroke="#38d5b0"/>
+            <text x="225" y="267" fill="#38d5b0" font-weight="700">Mem. /</text><text x="225" y="279" fill="#38d5b0" font-weight="700">Trial?</text>
+            <rect x="290" y="225" width="145" height="52" rx="26" fill="#2a3340" stroke="#4b5666"/>
+            <text x="362" y="245"><tspan x="362">Profile Setup</tspan><tspan x="362" dy="12">(Language, goal,</tspan><tspan x="362" dy="12">sports records)</tspan></text>
+            <polygon points="475,251 520,225 565,251 520,277" fill="#14181f" stroke="#38d5b0"/>
+            <text x="520" y="248" fill="#38d5b0" font-weight="700">Want a Trial</text><text x="520" y="260" fill="#38d5b0" font-weight="700">period?</text>
+            <rect x="600" y="210" width="115" height="42" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="657" y="235">30 Day Trial</text>
+            <rect x="750" y="210" width="125" height="42" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="812" y="229"><tspan x="812">Nominal Payment</tspan><tspan x="812" dy="12">for Trial</tspan></text>
+            <rect x="910" y="210" width="130" height="42" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="975" y="229"><tspan x="975">Choice of Sport</tspan><tspan x="975" dy="12">(can change later)</tspan></text>
+            <rect x="600" y="300" width="125" height="42" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="662" y="319"><tspan x="662">Fulltime Membership</tspan><tspan x="662" dy="12">Plans</tspan></text>
+            <rect x="760" y="300" width="90" height="42" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="805" y="325">Payment</text>
+            <rect x="885" y="300" width="130" height="42" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="950" y="319"><tspan x="950">Choice of Sport</tspan><tspan x="950" dy="12">(can change later)</tspan></text>
+            <circle cx="1090" cy="255" r="14" fill="#14181f" stroke="#38d5b0"/>
+            <rect x="1140" y="235" width="150" height="42" rx="21" fill="#67b53f"/><text x="1215" y="260" fill="#fff" font-weight="700">Available Membership Benefits</text>
+
+            <!-- INSTRUCTOR -->
+            <rect x="290" y="430" width="145" height="45" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="362" y="449"><tspan x="362">Profile Setup</tspan><tspan x="362" dy="12">(Achievements, trained count)</tspan></text>
+            <rect x="465" y="430" width="145" height="45" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="537" y="449"><tspan x="537">Prepare batch</tspan><tspan x="537" dy="12">allocation</tspan></text>
+            <rect x="640" y="430" width="145" height="45" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="712" y="449"><tspan x="712">Update Rules &amp;</tspan><tspan x="712" dy="12">Regulations</tspan></text>
+            <rect x="815" y="430" width="155" height="45" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="892" y="449"><tspan x="892">Performance parameters</tspan><tspan x="892" dy="12">for assigned members</tspan></text>
+            <rect x="1000" y="430" width="145" height="45" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="1072" y="449"><tspan x="1072">Inventory Management</tspan><tspan x="1072" dy="12">for Sports Equipment</tspan></text>
+            <rect x="1170" y="430" width="150" height="45" rx="22" fill="#7b4aa8"/><text x="1245" y="449" fill="#fff" font-weight="700"><tspan x="1245">Training Members</tspan><tspan x="1245" dy="12">to fulfill goals</tspan></text>
+
+            <!-- RENTAL -->
+            <rect x="270" y="650" width="135" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="337" y="668"><tspan x="337">Use until rental</tspan><tspan x="337" dy="12">period lasts</tspan></text>
+            <polygon points="450,672 495,645 540,672 495,699" fill="#14181f" stroke="#ef6a60"/><text x="495" y="669" fill="#ef6a60" font-weight="700">Extended</text><text x="495" y="681" fill="#ef6a60" font-weight="700">Rental?</text>
+            <rect x="575" y="630" width="155" height="44" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="652" y="649"><tspan x="652">Extend Rental Period</tspan><tspan x="652" dy="12">(Manual / Automatic)</tspan></text>
+            <rect x="765" y="630" width="135" height="44" rx="7" fill="#2a3340" stroke="#4b5666"/><text x="832" y="649"><tspan x="832">Payment for</tspan><tspan x="832" dy="12">extended period</tspan></text>
+            <rect x="935" y="630" width="140" height="44" rx="22" fill="#ef6a60"/><text x="1005" y="656" fill="#fff" font-weight="700">Return Equipment</text>
+
+            <rect x="190" y="755" width="145" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="262" y="774"><tspan x="262">Free home delivery</tspan><tspan x="262" dy="12">of equipment</tspan></text>
+            <rect x="365" y="755" width="85" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="407" y="781">Payment</text>
+            <rect x="480" y="755" width="145" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="552" y="774"><tspan x="552">Delivery</tspan><tspan x="552" dy="12">location / address</tspan></text>
+            <rect x="655" y="755" width="135" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="722" y="774"><tspan x="722">No. of days</tspan><tspan x="722" dy="12">for rental</tspan></text>
+            <rect x="820" y="755" width="145" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="892" y="774"><tspan x="892">Choose quantity</tspan><tspan x="892" dy="12">for equipment</tspan></text>
+            <rect x="995" y="755" width="145" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="1067" y="774"><tspan x="1067">List of Equipments</tspan><tspan x="1067" dy="12">(Rackets, shuttlecock, etc.)</tspan></text>
+            <rect x="1170" y="755" width="145" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="1242" y="774"><tspan x="1242">Choose Sport</tspan><tspan x="1242" dy="12">(Badminton, Tennis, etc.)</tspan></text>
+            <polygon points="1360,777 1405,750 1450,777 1405,804" fill="#14181f" stroke="#ef6a60"/><text x="1405" y="774" fill="#ef6a60" font-weight="700">Rental /</text><text x="1405" y="786" fill="#ef6a60" font-weight="700">Booking</text>
+
+            <!-- CLUB SERVICES -->
+            <g transform="translate(180 0)">
+              <polygon points="1405,905 1450,878 1495,905 1450,932" fill="#14181f" stroke="#b31235"/><text x="1450" y="902" fill="#ef6a60" font-weight="700">Club /</text><text x="1450" y="914" fill="#ef6a60" font-weight="700">Services</text>
+              <rect x="1230" y="895" width="150" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="1305" y="914"><tspan x="1305">Check date availability</tspan><tspan x="1305" dy="12">for activity</tspan></text>
+              <rect x="1045" y="895" width="150" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="1120" y="914"><tspan x="1120">Choose days</tspan><tspan x="1120" dy="12">for activity</tspan></text>
+              <rect x="860" y="895" width="145" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="932" y="914"><tspan x="932">Select single /</tspan><tspan x="932" dy="12">multiple sports</tspan></text>
+              <rect x="675" y="895" width="145" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="747" y="914"><tspan x="747">No. of people</tspan><tspan x="747" dy="12">participating / organising</tspan></text>
+              <rect x="490" y="895" width="145" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="562" y="914">No. of referees</text>
+              <rect x="310" y="895" width="145" height="44" rx="22" fill="#2a3340" stroke="#4b5666"/><text x="382" y="914">Billing &amp; Payment</text>
+              <rect x="125" y="895" width="150" height="44" rx="22" fill="#b31235"/><text x="200" y="914" fill="#fff" font-weight="700"><tspan x="200">Club &amp; services booked</tspan><tspan x="200" dy="12">for selected activities</tspan></text>
+              <rect x="125" y="1000" width="150" height="44" rx="22" fill="#b31235"/><text x="200" y="1019" fill="#fff" font-weight="700"><tspan x="200">Email confirmation</tspan><tspan x="200" dy="12">with booking details</tspan></text>
+            </g>
+          </g>
+
+          <!-- Connectors -->
+          <g fill="none" stroke="#7b8c8f" stroke-width="1.35" marker-end="url(#arrow)">
+            <path d="M305 79 H355"/><path d="M455 79 H490"/><path d="M610 64 H640"/><path d="M740 64 H770"/><path d="M870 64 H900"/><path d="M1020 64 H1050"/><path d="M1160 64 H1190"/><path d="M1300 64 H1326"/><path d="M1354 64 H1375"/>
+            <path d="M405 50 V22 H1427 V40"/>
+            <path d="M1427 88 V190 H225 V245"/>
+            <path d="M265 270 H290"/><path d="M435 251 H475"/><path d="M565 251 H600"/><path d="M715 231 H750"/><path d="M875 231 H910"/><path d="M1040 231 H1076"/>
+            <path d="M520 277 V321 H600"/><path d="M725 321 H760"/><path d="M850 321 H885"/><path d="M1015 321 H1090 V271"/>
+            <path d="M225 295 V402 H362 V430"/><path d="M435 452 H465"/><path d="M610 452 H640"/><path d="M785 452 H815"/><path d="M970 452 H1000"/><path d="M1145 452 H1170"/>
+            <path d="M1215 277 V590 H1405 V750"/>
+            <path d="M1072 475 V605 H1005 V630" stroke-dasharray="5 5"/>
+            <path d="M405 672 H450"/><path d="M540 672 H575"/><path d="M730 652 H765"/><path d="M900 652 H935"/>
+            <path d="M495 699 V735 H337 V650"/><path d="M337 694 V735 H262 V755"/>
+            <path d="M335 777 H365"/><path d="M450 777 H480"/><path d="M625 777 H655"/><path d="M790 777 H820"/><path d="M965 777 H995"/><path d="M1140 777 H1170"/><path d="M1315 777 H1360"/>
+            <path d="M1405 804 V842 H1630 V878"/>
+            <path d="M1630 905 H1560"/><path d="M1410 917 H1375"/><path d="M1225 917 H1185"/><path d="M1040 917 H1000"/><path d="M855 917 H815"/><path d="M670 917 H630"/><path d="M485 917 H450"/><path d="M300 917 H265"/><path d="M380 939 V1000"/>
+          </g>
+
+          <g font-family="DM Mono, monospace" font-size="9" font-weight="700" fill="#38d5b0">
+            <text x="465" y="43">No</text><text x="412" y="125">Yes</text>
+            <text x="277" y="258">Member</text><text x="232" y="363">Instructor</text>
+            <text x="565" y="245">Yes</text><text x="536" y="315">No</text>
+            <text x="1330" y="736">Rental</text><text x="1515" y="850">Booking</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="role-grid" style="grid-template-columns:1fr 1fr;margin-top:32px">
+        <article>
+          <h3>Equipment Rental Path</h3>
+          <p>Club Services → Borrow Rental Equipment → Choose Sport → Select Quantity &amp; Days → Address → Bill &amp; Payment → Home Delivery → Extension / Return.</p>
+        </article>
+        <article>
+          <h3>Club &amp; Event Services Path</h3>
+          <p>Club Services → Book Services for Events → Event Scope &amp; Dates → Check Location Availability → Referees &amp; Equipment → Billing Quote → Payment Confirmation.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 WIREFRAMES -->
+    <section id="wireframes" class="case-block shell">
+      <p class="kicker">10 · Low-Fidelity Wireframes</p>
+      <div class="case-split">
+        <h2>Structuring key interface modules.</h2>
+        <p>Exploring layout density across onboarding, member profiles, inventory, rental checkout, and event booking screens.</p>
+      </div>
+
+      <div class="case-media-box full-width-img">
+        <img src="assets/wireframes_clean.png" alt="Reneq low fidelity wireframes" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="case-media-placeholder" style="display:none">
+          <span>Low Fidelity Wireframes (assets/wireframes_clean.png)</span>
+          <small>Grouped by major product area</small>
+        </div>
+        <div class="case-media-caption">Original case-study visual — low-fidelity wireframes grouped by major product area.</div>
+      </div>
+
+      <div class="role-grid" style="grid-template-columns:repeat(3,1fr);margin-top:24px">
+        <article><h3>Onboarding</h3><p>Structure for introducing the product and getting users into the experience.</p></article>
+        <article><h3>Instructor</h3><p>Profile and primary pages for the instructor role.</p></article>
+        <article><h3>Member</h3><p>Member profile, membership plans and homepage structure.</p></article>
+        <article><h3>Rental</h3><p>Rental equipment selection, delivery and notification states.</p></article>
+        <article><h3>Commerce</h3><p>Billing information, payment and orders.</p></article>
+        <article><h3>Club services</h3><p>Booking the club and its services for sports events.</p></article>
+      </div>
+    </section>
+
+    <!-- 11 BRAND & DESIGN SYSTEM -->
+    <section id="brand" class="case-block shell">
+      <p class="kicker">11 · Brand Identity &amp; Design System</p>
+      <div class="case-split">
+        <h2>Symbolizing rental, sport, and value.</h2>
+        <div>
+          <p>The Reneq identity bridges sports equipment imagery with financial accessibility.</p>
+        </div>
+      </div>
+
+      <div class="case-media-box full-width-img">
+        <img src="assets/logo_design.png" alt="Reneq logo design and identity" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="case-media-placeholder" style="display:none">
+          <span>Logo Design &amp; Brand Identity (assets/logo_design.png)</span>
+          <small>Logo mark, logotype and identity variations</small>
+        </div>
+        <div class="case-media-caption">Original case-study visual — logo mark, logotype and identity variations.</div>
+      </div>
+
+      <div class="role-grid" style="grid-template-columns:1fr 1fr;margin-top:24px">
+        <article>
+          <h3>Logo mark</h3>
+          <p>The sports equipment is combined with the rupee symbol. Table Tennis is among the sports offered, and the symbol resembles the letter “R”. Font: Lato.</p>
+        </article>
+        <article>
+          <h3>Logotype</h3>
+          <p><strong>REN</strong> (derived from <em>Rental</em>) + <strong>EQ</strong> (derived from <em>Equipment</em>)—creating a punchy brand name. Typeface: Georgia Bold.</p>
+        </article>
+      </div>
+
+      <div class="swatch-group" style="margin-top:32px">
+        <div class="swatch-item" style="background:#37D7AD;color:#14181f">#37D7AD</div>
+        <div class="swatch-item" style="background:#017E8E;color:#fff">#017E8E</div>
+        <div class="swatch-item" style="background:#F85858;color:#fff">#F85858</div>
+        <div class="swatch-item" style="background:#0E4D55;color:#fff">#0E4D55</div>
+        <div class="swatch-item" style="background:#707070;color:#fff">#707070</div>
+        <div class="swatch-item" style="background:#FFFFFF;color:#14181f;border-color:#2a3340">#FFFFFF</div>
+      </div>
+    </section>
+
+    <!-- 12 HIGH FIDELITY UI -->
+    <section id="ui" class="case-block shell">
+      <p class="kicker">12 · High-Fidelity UI</p>
+      <div class="case-split">
+        <h2>The final product experience.</h2>
+        <p>The final interface translates the product proposition into dedicated experiences for onboarding, membership, members, instructors, equipment rental and sports-event services.</p>
+      </div>
+
+      <!-- Feature 1: Onboarding -->
+      <div class="feature-row-split">
+        <div class="case-media-box">
+          <img src="assets/hifi.png" alt="Reneq high fidelity onboarding and membership screens" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="case-media-placeholder" style="display:none">
+            <span>High Fidelity Onboarding Screens (assets/hifi.png)</span>
+            <small>Onboarding and membership screens</small>
+          </div>
+          <div class="case-media-caption">Original case-study visual — high-fidelity onboarding and membership screens.</div>
+        </div>
+        <div class="feature-copy-side">
+          <h3>Onboarding</h3>
+          <p>Users scroll through splash screens that introduce the Training, Renting Equipment and Club Booking features of the app.</p>
+          <ul>
+            <li>Sign up easily with Gmail or phone number.</li>
+            <li>Reset password and activate the account.</li>
+            <li>Create a minimal member profile.</li>
+            <li>Reach the main experience without unnecessary friction.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 2: Member screens -->
+      <div class="feature-row-split">
+        <div class="case-media-box">
+          <img src="assets/member.png" alt="Reneq member screens" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="case-media-placeholder" style="display:none">
+            <span>Member Homepage Screens (assets/member.png)</span>
+            <small>Member homepage and navigation</small>
+          </div>
+          <div class="case-media-caption">Original case-study visual — member homepage and navigation.</div>
+        </div>
+        <div class="feature-copy-side">
+          <h3>Member screens</h3>
+          <p>The homepage is designed to comprise charts at a glance that update daily. Users can navigate through different tabs using the Navigation Bar, and CTA buttons on the homepage and other pages drive user action.</p>
+        </div>
+      </div>
+
+      <!-- Feature 3: Instructor screens -->
+      <div class="feature-row-split">
+        <div class="case-media-box">
+          <img src="assets/instructor.png" alt="Reneq instructor and member screen exploration" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="case-media-placeholder" style="display:none">
+            <span>Instructor &amp; Member Screen Exploration (assets/instructor.png)</span>
+            <small>Instructor screens &amp; batch planning</small>
+          </div>
+          <div class="case-media-caption">Original case-study visual — instructor and member screen exploration.</div>
+        </div>
+        <div class="feature-copy-side">
+          <h3>Instructor screens</h3>
+          <p>Instructors work as a bridge between the club and members, so the case study treats their screens as a distinct experience.</p>
+          <ul>
+            <li>Write rules and regulations.</li>
+            <li>Plan batches.</li>
+            <li>Look after club inventory.</li>
+            <li>Keep tabs on member performance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 4: Borrowing rental equipment -->
+      <div class="feature-row-split">
+        <div class="case-media-box">
+          <img src="assets/rental.png" alt="Reneq rental equipment flow" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="case-media-placeholder" style="display:none">
+            <span>Rental Equipment Flow (assets/rental.png)</span>
+            <small>Borrowing rental equipment from the club</small>
+          </div>
+          <div class="case-media-caption">Original case-study visual — borrowing rental equipment from the club.</div>
+        </div>
+        <div class="feature-copy-side">
+          <h3>Borrowing rental equipment from the club</h3>
+          <ol>
+            <li>Tap the Club Services icon from the Navigation Bar.</li>
+            <li>Tap <strong>Borrow Rental Equipments</strong>.</li>
+            <li>Select the choice of sport and get a list of equipment.</li>
+            <li>Choose the equipment, quantity and rental duration.</li>
+            <li>Enter the delivery address.</li>
+            <li>Tap <strong>Deliver to this Address</strong> to receive home delivery.</li>
+            <li>Review the detailed bill.</li>
+            <li>Tap <strong>Pay</strong> to open the payment gateway.</li>
+            <li>Complete payment and receive the home delivery.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Feature 5: Booking club services for events -->
+      <div class="feature-row-split">
+        <div class="case-media-box">
+          <img src="assets/event.png" alt="Reneq sports event booking flow" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="case-media-placeholder" style="display:none">
+            <span>Sports Event Booking Flow (assets/event.png)</span>
+            <small>Booking the club and its services for sports events</small>
+          </div>
+          <div class="case-media-caption">Original case-study visual — booking the club and its services for sports events.</div>
+        </div>
+        <div class="feature-copy-side">
+          <h3>Booking the club &amp; its services for sports events</h3>
+          <p>The experience is designed as a comprehensive page for organising a sports event.</p>
+          <ul>
+            <li>Tap Club Services → Book Club Services for Events.</li>
+            <li>Check location availability for events at an office or society.</li>
+            <li>Check date availability to avoid untimely cancellations and book in advance.</li>
+            <li>The address page only triggers if the member does not select “Book the Club for the event period”; otherwise it is automatically bypassed.</li>
+            <li>Review billing information with a total quote for organising the event.</li>
+            <li>Review the amount and checkout through the payment gateway.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Final Exploration visual -->
+      <div class="case-media-box full-width-img" style="margin-top:48px">
+        <img src="assets/final.png" alt="Reneq final product screen exploration" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="case-media-placeholder" style="display:none">
+          <span>Final Product Exploration (assets/final.png)</span>
+          <small>Final product screen exploration across the app</small>
+        </div>
+        <div class="case-media-caption">Original case-study visual — final product screen exploration across the app.</div>
+      </div>
+
+      <!-- Behance CTA Box -->
+      <div class="quote-banner" style="margin-top:48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
+        <div>
+          <h3 style="margin:0 0 6px;font-size:24px">See the original Reneq project</h3>
+          <p style="margin:0;font-size:14px;color:var(--muted)">Explore the complete original presentation and visual archive on Behance.</p>
+        </div>
+        <a class="btn-fill" href="https://www.behance.net/gallery/120543161/UX-Case-Study-Reneq" target="_blank" rel="noopener noreferrer">Visit Behance ↗</a>
+      </div>
+    </section>
+
+    <section class="home-contact shell">
+      <h2>Want to walk through<br>the decisions?</h2>
+      <div class="contact-split">
+        <p>Happy to talk through user research, card sorting, or the swimlane user flows.</p>
+        <p>Email is the fastest path. I read every note.</p>
+      </div>
+      <div class="hero-actions contact-actions">
+        <a class="btn-fill" href="mailto:hello@rajtanawade.com"><i data-lucide="mail"></i> Email</a>
+        <a class="btn-ghost" href="index.html#work">Back to work</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <span>© 2026 Raj Tanawade</span>
+    <span>Reneq UX Case Study · 12 Weeks</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.544.0"></script>
+  <script src="script.js"></script>
+</body>
+</html>

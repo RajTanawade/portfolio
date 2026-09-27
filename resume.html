@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Resume — Raj Tanawade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <style>
+    .resume-page{background:var(--warm);min-height:100vh}
+    .resume-wrap{max-width:820px;margin:0 auto;padding:48px 32px 80px}
+    .resume-top{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:48px}
+    .resume-top h1{margin:8px 0 6px;font:700 42px/1.05 var(--display);letter-spacing:-.06em}
+    .resume-top p{margin:0;color:#5b5954;max-width:420px}
+    .resume-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .resume-block{padding:28px 0;border-top:1px solid #d9d3cc}
+    .resume-block h2{margin:0 0 14px;font:600 13px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#77736c}
+    .resume-block h3{margin:0 0 6px;font:700 22px var(--display);letter-spacing:-.04em}
+    .resume-block p,.resume-block li{color:#4f4e4a;line-height:1.65}
+    .resume-meta{font:12px var(--mono);color:#77736c;margin-bottom:10px}
+    @media print{
+      .home-header,.resume-actions{display:none}
+      .resume-page{background:#fff}
+      .resume-wrap{padding:0}
+    }
+  </style>
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body class="resume-page">
+  <header class="home-header">
+    <a class="wordmark" href="index.html">RT<span>.</span></a>
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle light and dark mode" title="Toggle light/dark theme">
+        <span class="toggle-track">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <span class="toggle-thumb"></span>
+        </span>
+      </button>
+      <a class="header-contact" href="mailto:hello@rajtanawade.com">Contact me</a>
+    </div>
+  </header>
+  <div class="resume-wrap">
+    <div class="resume-top">
+      <div>
+        <p class="kicker">Product designer</p>
+        <h1>Raj Tanawade</h1>
+        <p>6+ years designing enterprise SaaS across EdTech, HRTech, banking, security, and AI. I make complex systems easier to reason about without pretending they are simple.</p>
+      </div>
+      <div class="resume-actions">
+        <a class="btn-fill" href="mailto:hello@rajtanawade.com"><i data-lucide="mail"></i> Contact</a>
+        <button class="btn-ghost" type="button" onclick="window.print()"><i data-lucide="printer"></i> Print / PDF</button>
+      </div>
+    </div>
+
+    <section class="resume-block">
+      <h2>Selected work</h2>
+      <h3>Learning Management Platform</h3>
+      <p class="resume-meta">UI/UX Designer · Japanese MNC · 2021–2023 · Web + Mobile</p>
+      <p>Joined a complex enterprise LMS mid-development. Designed and shipped goal setting, a native survey builder, Super Admin analytics across tenants, and a learning-oriented community. Features moved from concept through development in 2–3 sprint cycles; internal customer surveys showed a 17% usability improvement.</p>
+    </section>
+
+    <section class="resume-block">
+      <h3>HireCorrecto</h3>
+      <p class="resume-meta">UI/UX / Product Designer · Enterprise AI hiring · ~1 year</p>
+      <p>Designed a multi-role AI recruitment platform spanning job creation, screening, assessments, interviews and evaluation. Built an evolving DSL on top of existing developer UI libraries so new workflows could land without breaking the product language.</p>
+    </section>
+
+    <section class="resume-block">
+      <h3>Reneq — Sports Rental &amp; Club Services</h3>
+      <p class="resume-meta">Product Designer · Sports Equipment Rental &amp; Club Services · Mobile App · 12 weeks</p>
+      <p>Designed a comprehensive sports platform solving the equipment access gap. Created 25+ screens spanning home-delivered equipment rentals, membership plans, mentor coaching, card sorting information architecture, and corporate sports event bookings.</p>
+    </section>
+
+    <section class="resume-block">
+      <h3>Design system &amp; DSL architecture</h3>
+      <p class="resume-meta">NDA · Shared component language</p>
+      <p>Helped turn inconsistency into a dependable system: reusable components, clearer handoff, and less reinvention across data-rich product surfaces. Details protected by NDA.</p>
+    </section>
+
+    <section class="resume-block">
+      <h2>Practice</h2>
+      <p>Product design for complex enterprise software. Also an artist, graphic designer, and mobile photographer — practices that keep composition, contrast, and emotional cueing sharp.</p>
+    </section>
+  </div>
+  <script src="https://unpkg.com/lucide@0.544.0"></script>
+  <script src="script.js"></script>
+  <script>window.lucide && lucide.createIcons();</script>
+</body>
+</html>

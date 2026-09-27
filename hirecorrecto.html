@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="HireCorrecto case study — Raj Tanawade. Designing a scalable AI hiring ecosystem with an evolving design language.">
+  <title>HireCorrecto — AI Hiring Platform · Raj Tanawade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="case.css">
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body class="case-page">
+  <header class="home-header">
+    <a class="wordmark" href="index.html">RT<span>.</span></a>
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">How I think</a>
+      <a href="index.html#side-quests">Side quests</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle light and dark mode" title="Toggle light/dark theme">
+        <span class="toggle-track">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <span class="toggle-thumb"></span>
+        </span>
+      </button>
+      <a class="header-contact" href="index.html#contact">Contact me</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero shell">
+      <a class="back-link" href="index.html#work">← Selected work</a>
+      <p class="kicker">Enterprise AI hiring · Product UX · Design system · DSL</p>
+      <h1>Designing a scalable hiring ecosystem that stays one product as it grows.</h1>
+      <p class="case-lede">HireCorrecto brings job creation, candidate screening, assessments, AI interviews, scheduling and evaluation into one connected experience. The product kept evolving for about a year. My role was to turn that growing complexity into a consistent, scalable, developer-ready experience.</p>
+      <dl class="case-meta">
+        <div><dt>Duration</dt><dd>~1 year</dd></div>
+        <div><dt>Role</dt><dd>UI/UX / Product Designer</dd></div>
+        <div><dt>Product</dt><dd>Enterprise AI recruitment platform</dd></div>
+        <div><dt>Scope</dt><dd>UX architecture, UI, DSL, competitive analysis, engineering alignment</dd></div>
+      </dl>
+    </section>
+
+    <nav class="case-nav" aria-label="Case study sections">
+      <a href="#overview">Overview</a>
+      <a href="#architecture">UX Architecture</a>
+      <a href="#roles-access">Role-Based Experience</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#role">My Role</a>
+      <a href="#challenge">Challenges</a>
+      <a href="#process">Process</a>
+      <a href="#features">Features</a>
+      <a href="#results">Results</a>
+      <a href="#wins">Wins</a>
+      <a href="#next">Next</a>
+      <a href="#gallery">Visuals</a>
+    </nav>
+
+    <section id="overview" class="case-block shell">
+      <p class="kicker">01 · Overview</p>
+      <div class="case-split">
+        <h2>Hiring is not one workflow. It’s an ecosystem.</h2>
+        <div>
+          <p>HireCorrecto was not a single-flow product. New hiring workflows, user roles, AI capabilities and technical requirements kept arriving throughout the project.</p>
+          <p>The design question was never only “what does this screen look like?” It was: does this solution still hold when the next workflow arrives?</p>
+        </div>
+      </div>
+      <div class="impact-strip overview-impact">
+        <article>
+          <strong>1 system</strong>
+          <p>A product language that could absorb new workflows without redesigning the platform</p>
+        </article>
+        <article>
+          <strong>7 roles</strong>
+          <p>Shared UI patterns that adapt across Super Admin through Interviewer</p>
+        </article>
+        <article>
+          <strong>Library + DSL</strong>
+          <p>Design mapped to existing developer components, then evolved as a living system</p>
+        </article>
+        <article>
+          <strong>~1 year</strong>
+          <p>Ongoing competitive analysis and pattern refinement as the product expanded</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="architecture" class="case-block shell">
+      <p class="kicker">02 · Product UX Architecture</p>
+      <div class="case-split">
+        <h2>From job creation to hiring decision.</h2>
+        <div>
+          <p>A portfolio-level view of the hiring experience: six core stages connected by AI capabilities, communication automation, and role-based access.</p>
+          <p>The primary journey stays simple. The complexity sits inside each stage rather than becoming the navigation itself.</p>
+        </div>
+      </div>
+
+      <div class="journey-flow" style="margin-top:36px">
+        <article class="flow-card"><span>01 · CREATE</span><h3>Create</h3><p>Define the role &amp; generate the JD</p></article>
+        <article class="flow-card"><span>02 · SCREEN</span><h3>Screen</h3><p>Parse, call &amp; shortlist candidates</p></article>
+        <article class="flow-card"><span>03 · ASSESS</span><h3>Assess</h3><p>Measure role-specific skills</p></article>
+        <article class="flow-card"><span>04 · INTERVIEW</span><h3>Interview</h3><p>AI and human conversations</p></article>
+        <article class="flow-card"><span>05 · EVALUATE</span><h3>Evaluate</h3><p>Combine scores &amp; feedback</p></article>
+        <article class="flow-card"><span>06 · HIRE</span><h3>Hire</h3><p>Make the final candidate decision</p></article>
+      </div>
+
+      <div class="architecture-flow">
+        <div class="flow-grid-nodes">
+          <article class="flow-node-card">
+            <div class="node-num">01 · CREATE</div>
+            <h4>Job Opening</h4>
+            <p>Turn a hiring requirement into a structured role.</p>
+            <div class="chip-group"><span class="chip-tag">Job details</span><span class="chip-tag">JD generation</span><span class="chip-tag">Skills</span></div>
+          </article>
+          <article class="flow-node-card">
+            <div class="node-num">02 · SCREEN</div>
+            <h4>Candidate Screening</h4>
+            <p>Bring candidates in and identify relevant profiles.</p>
+            <div class="chip-group"><span class="chip-tag">Resume parsing</span><span class="chip-tag">AI calling</span><span class="chip-tag">Shortlist</span></div>
+          </article>
+          <article class="flow-node-card">
+            <div class="node-num">03 · ASSESS</div>
+            <h4>Assessments</h4>
+            <p>Evaluate knowledge and practical capability.</p>
+            <div class="chip-group"><span class="chip-tag">MCQ</span><span class="chip-tag">Subjective</span><span class="chip-tag">Programming</span></div>
+          </article>
+          <article class="flow-node-card">
+            <div class="node-num">04 · INTERVIEW</div>
+            <h4>Interviews</h4>
+            <p>Move candidates into AI or human-led interviews.</p>
+            <div class="chip-group"><span class="chip-tag">AI Avatar</span><span class="chip-tag">Scheduling</span><span class="chip-tag">Panel</span></div>
+          </article>
+          <article class="flow-node-card">
+            <div class="node-num">05 · EVALUATE</div>
+            <h4>Candidate Evaluation</h4>
+            <p>Bring evidence together into a candidate view.</p>
+            <div class="chip-group"><span class="chip-tag">Scorecards</span><span class="chip-tag">Feedback</span><span class="chip-tag">Ranking</span></div>
+          </article>
+          <article class="flow-node-card">
+            <div class="node-num">06 · HIRE</div>
+            <h4>Hiring Decision</h4>
+            <p>Use consolidated evidence to progress the selected candidate.</p>
+            <div class="chip-group"><span class="chip-tag">Reports</span><span class="chip-tag">Decision</span><span class="chip-tag">Communication</span></div>
+          </article>
+        </div>
+
+        <div class="ai-layer-box">
+          <div class="ai-layer-top">
+            <h3>AI capabilities embedded across the journey</h3>
+            <p>AI is a capability layer — not a separate destination.</p>
+          </div>
+          <div class="ai-grid-cards">
+            <div class="ai-grid-item"><b>JD Generation</b><span>Role-specific job descriptions</span></div>
+            <div class="ai-grid-item"><b>Resume Screening</b><span>Candidate parsing &amp; evaluation</span></div>
+            <div class="ai-grid-item"><b>AI Calling</b><span>English, Hindi &amp; Hinglish screening</span></div>
+            <div class="ai-grid-item"><b>AI Assessments</b><span>Automated evaluation support</span></div>
+            <div class="ai-grid-item"><b>AI Avatar</b><span>Conversational interviews &amp; follow-ups</span></div>
+            <div class="ai-grid-item"><b>Ranking &amp; Reports</b><span>Consolidated candidate insights</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:48px">
+        <div class="case-split">
+          <h2>Cross-cutting automation</h2>
+          <p>Two capabilities connect the stages and reduce the amount of manual coordination required from the hiring team.</p>
+        </div>
+        <div class="automation-grid">
+          <div class="cross-card">
+            <h3>WhatsApp &amp; Candidate Communication</h3>
+            <p>Candidate communication can support invitations, reminders, updates, scheduling and other touchpoints throughout the journey.</p>
+            <div class="cross-bar"><i></i></div>
+          </div>
+          <div class="cross-card">
+            <h3>Hiring Workflow Automation</h3>
+            <p>Stages are connected so candidates can move through screening, assessment, interviews and evaluation without fragmented handoffs.</p>
+            <div class="cross-bar"><i></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-legend">
+        <span><i class="swatch-box" style="background:var(--cream)"></i> Core hiring journey</span>
+        <span><i class="swatch-box" style="background:var(--orange)"></i> Role / access dimension</span>
+        <span><i class="swatch-box" style="background:var(--muted)"></i> Cross-cutting capability</span>
+      </div>
+      <p class="arch-note">
+        Portfolio framing: this is a high-level product UX map based on the documented HireCorrecto capabilities and role definitions. Exact permissions, triggers and stage ownership are presented in the individual feature deep-dives.
+      </p>
+    </section>
+
+    <section id="roles-access" class="case-block shell">
+      <p class="kicker">03 · Role-Based Experience</p>
+      <div class="case-split">
+        <h2>7 roles. 1 adaptive product language.</h2>
+        <div>
+          <p>Access is a separate dimension of the product. Different users participate in the same hiring journey with completely different responsibilities.</p>
+          <p>Instead of creating seven distinct apps, the UI patterns, dashboards, and tables adapt cleanly to each persona’s permission set.</p>
+        </div>
+      </div>
+
+      <div class="roles-grid-cards">
+        <div class="role-card-item">
+          <div class="role-avatar-badge">SA</div>
+          <h4>Super Admin</h4>
+          <p>Organization-level setup and administration.</p>
+        </div>
+        <div class="role-card-item">
+          <div class="role-avatar-badge">HH</div>
+          <h4>HR Head</h4>
+          <p>Top-level channel management and HR oversight.</p>
+        </div>
+        <div class="role-card-item">
+          <div class="role-avatar-badge">HL</div>
+          <h4>HR Lead</h4>
+          <p>Manages HR teams assigned to channels.</p>
+        </div>
+        <div class="role-card-item">
+          <div class="role-avatar-badge">HR</div>
+          <h4>HR</h4>
+          <p>Own tasks and channel-level hiring activities.</p>
+        </div>
+        <div class="role-card-item">
+          <div class="role-avatar-badge">CH</div>
+          <h4>Channel Head</h4>
+          <p>Tracks requirements, work and team performance.</p>
+        </div>
+        <div class="role-card-item">
+          <div class="role-avatar-badge">EV</div>
+          <h4>Evaluator</h4>
+          <p>Creates and manages interviews, assessments and screenings.</p>
+        </div>
+        <div class="role-card-item">
+          <div class="role-avatar-badge">IN</div>
+          <h4>Interviewer</h4>
+          <p>Adds interview slots and conducts scheduled interviews.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="objectives" class="case-block shell">
+      <p class="kicker">04 · Objectives</p>
+      <div class="case-split">
+        <h2>Make a complex hiring ecosystem feel like one coherent product.</h2>
+        <div>
+          <p>The platform had to support Super Admin, HR Head, HR Lead, HR, Channel Head, Evaluator and Interviewer — while AI, communication and automation ran across the journey.</p>
+          <p>Success meant a shared product language: navigation, dashboards, permissions, tables, forms and reporting that could flex by role without becoming seven different products.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="role" class="case-block shell">
+      <p class="kicker">05 · My role</p>
+      <h2>Product design, systems, and implementation alignment — not only Figma production.</h2>
+      <div class="role-grid">
+        <article>
+          <h3>Product &amp; UX</h3>
+          <p>Requirements, flows, IA, workflow simplification, role-based experience, competitive analysis, layout exploration.</p>
+        </article>
+        <article>
+          <h3>UI</h3>
+          <p>Wireframes, high-fidelity UI, dashboards, forms, candidate management, assessments, interviews, reporting.</p>
+        </article>
+        <article>
+          <h3>Design system</h3>
+          <p>DSL, component architecture, reusable patterns, states, variants, visual consistency across modules.</p>
+        </article>
+        <article>
+          <h3>Engineering</h3>
+          <p>Mapped existing UI libraries to product UI, designed custom components where needed, supported implementation.</p>
+        </article>
+        <article>
+          <h3>Ownership</h3>
+          <p>Almost a year on the product — refining patterns as new workflows arrived instead of treating the UI as finished.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="challenge" class="case-block shell">
+      <p class="kicker">06 · Challenges</p>
+      <div class="case-split">
+        <h2>The product was evolving alongside the business.</h2>
+        <div>
+          <p>New requirements meant new workflows, roles, assessment types, AI capabilities, candidate interactions, dashboards, components — and technical constraints from the libraries already in use.</p>
+          <p>At the same time, the product needed to compete with established recruitment platforms. Competitive analysis was an ongoing input, not a one-off workshop.</p>
+        </div>
+      </div>
+      <p class="quote-banner">The challenge wasn’t to remove complexity. It was to organize it so people only dealt with what was relevant to their task.</p>
+    </section>
+
+    <section id="process" class="case-block shell">
+      <p class="kicker">07 · Process &amp; execution</p>
+      <div class="case-split">
+        <h2>Competitors as a reference point — then a product language of our own.</h2>
+        <div>
+          <p>I used established hiring products to understand navigation, dashboards, candidate management, assessments, interviews, dense data, filtering and configuration. Then I explored multiple layouts against information density, task priority, role context, scalability and whether developers could actually build it on the existing library.</p>
+          <p>The interesting part: this wasn’t a single benchmarking pass. For almost a year, competitive analysis kept feeding layout decisions as the product expanded.</p>
+        </div>
+      </div>
+      <div class="phase-grid">
+        <article>
+          <span>Phase 01</span>
+          <h3>Foundation</h3>
+          <p>Core flows, initial layouts, competitor research, navigation.</p>
+        </article>
+        <article>
+          <span>Phase 02</span>
+          <h3>Expansion</h3>
+          <p>New workflows, AI capabilities, new roles, assessments, interviews.</p>
+        </article>
+        <article>
+          <span>Phase 03</span>
+          <h3>Systemization</h3>
+          <p>DSL evolution, new components and variants, developer alignment, pattern consolidation.</p>
+        </article>
+      </div>
+      <div class="dsl-map">
+        <article>
+          <span>Foundations</span>
+          <h3>Tokens</h3>
+          <ul><li>Typography</li><li>Spacing</li><li>Grid</li><li>Icons</li><li>Color</li></ul>
+        </article>
+        <article>
+          <span>Components</span>
+          <h3>Library + custom</h3>
+          <ul><li>Buttons, inputs, dropdowns</li><li>Modals, tabs</li><li>Custom variants where the library fell short</li></ul>
+        </article>
+        <article>
+          <span>Patterns</span>
+          <h3>Product flows</h3>
+          <ul><li>Forms and tables</li><li>Filters and dashboards</li><li>Workflows for HR, recruiter, assessment, interview, admin</li></ul>
+        </article>
+      </div>
+      <div class="case-split" style="margin-top:48px">
+        <h2>From UI library to HireCorrecto UI.</h2>
+        <div>
+          <p>I didn’t invent a visual system in isolation. Developers already had libraries. The work was to make stakeholder-facing UI look intentional while staying technically realistic — reuse, adapt, then specify custom variants only when needed, then review in implementation and fold the result back into the DSL.</p>
+          <p>That closed the gap between what people saw in Figma and what could actually ship.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="case-block shell">
+      <p class="kicker">08 · Features</p>
+      <h2>Six connected experiences — not six separate products.</h2>
+      <p class="quote-banner" style="margin-bottom:28px">A candidate isn’t a row in a table. They are a collection of evidence across the hiring journey.</p>
+      
+      <details class="feature-dive">
+        <summary>
+          <span>01</span>
+          <div>
+            <h3>Create</h3>
+            <p>Job creation and JD generation</p>
+          </div>
+          <i data-lucide="chevron-down"></i>
+        </summary>
+        <div class="dive-body">
+          <p class="dive-lead">Define requirements, skills and role information before opening the position — so later screening and assessment have something precise to work against.</p>
+        </div>
+      </details>
+      <details class="feature-dive">
+        <summary>
+          <span>02</span>
+          <div>
+            <h3>Screen</h3>
+            <p>Resume screening and AI calling</p>
+          </div>
+          <i data-lucide="chevron-down"></i>
+        </summary>
+        <div class="dive-body">
+          <p class="dive-lead">Move beyond purely manual resume review with AI-assisted screening, while keeping the human recruiter in control of who progresses.</p>
+        </div>
+      </details>
+      <details class="feature-dive">
+        <summary>
+          <span>03</span>
+          <div>
+            <h3>Assess</h3>
+            <p>MCQ · Subjective · Programming</p>
+          </div>
+          <i data-lucide="chevron-down"></i>
+        </summary>
+        <div class="dive-body">
+          <p class="dive-lead">Configure role-specific assessments and evaluate capability without treating every role as the same test.</p>
+        </div>
+      </details>
+      <details class="feature-dive">
+        <summary>
+          <span>04</span>
+          <div>
+            <h3>Interview</h3>
+            <p>AI avatar, scheduling, panel interviews</p>
+          </div>
+          <i data-lucide="chevron-down"></i>
+        </summary>
+        <div class="dive-body">
+          <p class="dive-lead">Support automated conversational interviews and human-led panels in the same journey, including scheduling and interviewer context.</p>
+        </div>
+      </details>
+      <details class="feature-dive">
+        <summary>
+          <span>05</span>
+          <div>
+            <h3>Evaluate</h3>
+            <p>Scorecards, feedback, ranking</p>
+          </div>
+          <i data-lucide="chevron-down"></i>
+        </summary>
+        <div class="dive-body">
+          <p class="dive-lead">Bring resume, screening, AI calling, assessment, AI interview, panel interview and feedback into one candidate view that can support a final score.</p>
+        </div>
+      </details>
+      <details class="feature-dive">
+        <summary>
+          <span>06</span>
+          <div>
+            <h3>Hire</h3>
+            <p>Reports, communication, decision</p>
+          </div>
+          <i data-lucide="chevron-down"></i>
+        </summary>
+        <div class="dive-body">
+          <p class="dive-lead">Connect evaluation to the hiring decision and candidate communication so the last mile is still part of the same product.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="results" class="case-block shell">
+      <p class="kicker">09 · Results</p>
+      <h2>Design outcomes I can stand behind — no invented metrics.</h2>
+      <div class="capability-row">
+        <article><span>01</span><h3>Scalable language</h3><p>The DSL could evolve as new workflows were introduced instead of spawning one-off UI.</p></article>
+        <article><span>02</span><h3>Dev alignment</h3><p>Existing libraries were considered while designing, so proposed UI was more implementation-aware.</p></article>
+        <article><span>03</span><h3>Consistency</h3><p>Reusable patterns kept interaction and visual language stable across modules.</p></article>
+        <article><span>04</span><h3>Faster exploration</h3><p>Layout patterns made it possible to try directions without rebuilding the interface from scratch.</p></article>
+        <article><span>05</span><h3>One ecosystem</h3><p>Hiring activities could be represented as connected stages rather than isolated features.</p></article>
+      </div>
+    </section>
+
+    <section id="wins" class="case-block shell">
+      <p class="kicker">10 · Personal wins</p>
+      <div class="case-split">
+        <h2>What I brought to the year of work.</h2>
+        <div>
+          <p><strong>Product thinking</strong> — mapping how hiring capabilities connect, not only how each screen looks.</p>
+          <p><strong>UX exploration</strong> — multiple layouts from competitor patterns, requirements and feasibility.</p>
+          <p><strong>Systems</strong> — an evolving DSL instead of one-off components.</p>
+          <p><strong>Technical awareness</strong> — designing custom UI against real developer libraries.</p>
+          <p><strong>Long-term ownership</strong> — refining patterns as the product changed instead of handing off a frozen file.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="next" class="case-block shell">
+      <p class="kicker">11 · Next phase</p>
+      <div class="case-split">
+        <h2>Scalability is not just reusable components.</h2>
+        <div>
+          <p>Designing an enterprise AI product taught me that a system has to absorb new workflows, users, business rules, technologies and interaction patterns without forcing a full redesign.</p>
+          <p>That became the philosophy of the HireCorrecto design language — and the next phase of any similar product is the same: keep the DSL alive as the hiring ecosystem keeps growing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="case-block shell">
+      <p class="kicker">12 · Visual assets</p>
+      <h2>Frames for the work. Screens go in as they are cleared for sharing.</h2>
+      <div class="gallery-grid">
+        <figure><span>Navigation / IA</span></figure>
+        <figure><span>Layout exploration</span></figure>
+        <figure><span>Candidate view</span></figure>
+        <figure><span>Assessment config</span></figure>
+        <figure><span>Interview scheduling</span></figure>
+        <figure><span>DSL components</span></figure>
+        <figure><span>Dashboard</span></figure>
+        <figure><span>Role views</span></figure>
+      </div>
+    </section>
+
+    <section id="highlight" class="case-block shell">
+      <p class="kicker">13 · Highlight summary</p>
+      <h2>I wasn’t just designing screens. I was helping establish the product language.</h2>
+      <div class="summary-grid">
+        <article>
+          <h3>Product</h3>
+          <p>Hiring journey, AI capabilities, automation — connected instead of isolated.</p>
+        </article>
+        <article>
+          <h3>UX</h3>
+          <p>Role-based experiences and workflows that share one language.</p>
+        </article>
+        <article>
+          <h3>System</h3>
+          <p>An evolving DSL, reusable UI, and alignment with what developers could build.</p>
+        </article>
+      </div>
+      <p class="quote-banner">One connected hiring experience — consistent enough to grow without losing itself.</p>
+    </section>
+
+    <section class="home-contact shell">
+      <h2>Want to walk through<br>the system?</h2>
+      <div class="contact-split">
+        <p>Happy to talk through layout exploration, the DSL, or how we bridged Figma and the existing UI library.</p>
+        <p>Email is the fastest path.</p>
+      </div>
+      <div class="hero-actions contact-actions">
+        <a class="btn-fill" href="mailto:hello@rajtanawade.com"><i data-lucide="mail"></i> Email</a>
+        <a class="btn-ghost" href="index.html#work">Back to work</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <span>© 2026 Raj Tanawade</span>
+    <span>HireCorrecto · ~1 year</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.544.0"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="LMS case study — Raj Tanawade. Employee upskilling platform for a Japanese MNC, spanning goals, surveys, analytics and community.">
+  <title>LMS — Employee Upskilling Platform · Raj Tanawade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="case.css">
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body class="case-page">
+  <header class="home-header">
+    <a class="wordmark" href="index.html">RT<span>.</span></a>
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">How I think</a>
+      <a href="index.html#side-quests">Side quests</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle light and dark mode" title="Toggle light/dark theme">
+        <span class="toggle-track">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <span class="toggle-thumb"></span>
+        </span>
+      </button>
+      <a class="header-contact" href="index.html#contact">Contact me</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero shell">
+      <a class="back-link" href="index.html#work">← Selected work</a>
+      <p class="kicker">Employee upskilling · Enterprise LMS · Web + Mobile</p>
+      <h1>Designing an LMS that helps employees learn, grow and move forward.</h1>
+      <p class="case-lede">A complex enterprise learning platform spanning goal management, learning pathways, analytics, feedback and internal communities. I joined mid-development, navigated competing requirements and role-based complexity, and helped turn ambiguous product requirements into shippable experiences.</p>
+      <dl class="case-meta">
+        <div><dt>Client</dt><dd>Japanese MNC</dd></div>
+        <div><dt>Duration</dt><dd>2021–2023</dd></div>
+        <div><dt>Platform</dt><dd>Web + Mobile</dd></div>
+        <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
+        <div><dt>Team</dt><dd>2 Designers, 1 PM, 10 Developers, 4 QA</dd></div>
+      </dl>
+    </section>
+
+    <nav class="case-nav" aria-label="Case study sections">
+      <a href="#overview">Overview</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#role">Role</a>
+      <a href="#features">Features</a>
+      <a href="#process">Process</a>
+      <a href="#learnings">Learnings</a>
+    </nav>
+
+    <section id="overview" class="case-block shell">
+      <p class="kicker">01 · Project overview</p>
+      <div class="case-split">
+        <h2>An internal platform for development, not just course catalogs.</h2>
+        <div>
+          <p>The client wanted an internal Learning Management Platform focused on employee development and career growth. The vision went beyond traditional course management.</p>
+          <p>I joined as UI/UX Designer, replacing a designer with about six years of experience. The role quickly expanded beyond screens: stakeholder alignment, research, feature definition, design, developer grooming, usability testing, and iteration.</p>
+        </div>
+      </div>
+      <div class="impact-strip overview-impact">
+        <article>
+          <strong>2–3</strong>
+          <p>Sprint cycles to take complex features from concept through design and development</p>
+        </article>
+        <article>
+          <strong>17%</strong>
+          <p>Improvement in usability from internal surveys with real customers</p>
+        </article>
+        <article>
+          <strong>Launch</strong>
+          <p>Design and delivery targets achieved for the planned market launch</p>
+        </article>
+        <article>
+          <strong>Mobile</strong>
+          <p>The application became more user-friendly and easier for the audience to interpret</p>
+        </article>
+      </div>
+      <ul class="vision-list">
+        <li>New-joiner onboarding</li>
+        <li>Employee upskilling</li>
+        <li>Internal role changes</li>
+        <li>Career goals</li>
+        <li>Learning pathways</li>
+        <li>Certifications</li>
+        <li>Engagement and community</li>
+        <li>Goal management</li>
+        <li>Feedback and improvement</li>
+        <li>Reporting and analytics</li>
+      </ul>
+    </section>
+
+    <section id="challenge" class="case-block shell">
+      <p class="kicker">02 · The challenge</p>
+      <div class="case-split">
+        <h2>Fragmented requirements. Half-cooked features. A product still trying to become an MVP.</h2>
+        <div>
+          <p>When I joined, multiple departments were involved, requirements were hard to align, and several features were only partially defined. The MVP was taking longer than expected. Different features served different personas, with complex role-based access, and the mobile experience needed to become easier for its audience to interpret.</p>
+          <blockquote>The work was not “design an LMS.” It was: take ownership of ambiguous, competing needs and turn them into experiences the team could actually ship.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="role" class="case-block shell">
+      <p class="kicker">03 · My role</p>
+      <h2>From screens to the full loop: align, define, design, groom, test, iterate.</h2>
+      <div class="role-grid">
+        <article>
+          <h3>Stakeholders</h3>
+          <p>Connected across departments, refined complex requirements, and translated expectations into workable UX.</p>
+        </article>
+        <article>
+          <h3>Research</h3>
+          <p>Studied comparable products and UX patterns, then used research and user feedback to suggest improvements.</p>
+        </article>
+        <article>
+          <h3>Product design</h3>
+          <p>Designed features from concept through UI: flows, interaction, responsive web and mobile, personas and permissions.</p>
+        </article>
+        <article>
+          <h3>Engineering</h3>
+          <p>Ran grooming calls, checked feasibility, clarified intent, and stayed close through implementation.</p>
+        </article>
+        <article>
+          <h3>Usability</h3>
+          <p>Tested after development, reviewed the live experience, and suggested changes from research and testing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="complexity" class="case-block shell">
+      <p class="kicker">04 · Designing through complexity</p>
+      <div class="case-split">
+        <h2>Four problem spaces. One product story.</h2>
+        <p>Each module proves a different capability: hierarchy, flexibility, constraint, and product thinking. Together they show how the platform was actually delivered.</p>
+      </div>
+      <div class="capability-row">
+        <article><span>01</span><h3>Handling complexity</h3><p>Goal setting — multi-level organizational structure, kept understandable.</p></article>
+        <article><span>02</span><h3>Flexibility</h3><p>Survey builder — enough control for creators, speed for respondents.</p></article>
+        <article><span>03</span><h3>Systems thinking</h3><p>Reporting — a large access problem solved with a small, scalable interaction.</p></article>
+        <article><span>04</span><h3>Product thinking</h3><p>Community — an engagement problem, not a visual refresh.</p></article>
+        <article><span>05</span><h3>Leadership</h3><p>Stakeholders, grooming, testing, and delivery across the LMS.</p></article>
+      </div>
+    </section>
+
+    <section id="features" class="case-block shell">
+      <p class="kicker">05 · Key features</p>
+      <h2>Open a module for the deep-dive. The overview stays short on purpose.</h2>
+
+      <details id="goal-setting" class="feature-dive">
+        <summary>
+          <span>01</span>
+          <div>
+            <h3>Goal setting</h3>
+            <p>Complex hierarchy &amp; role-based UX</p>
+          </div>
+          <i data-lucide="chevron-down"></i>
+        </summary>
+        <div class="dive-body">
+          <p class="dive-lead">The LMS had no goal-setting module. The organization wanted Organization → Department → Team → Individual goals inside the LMS, while hierarchy itself still lived in Workday.</p>
+          <div class="dive-grid">
+            <article>
+              <h4>The question</h4>
+              <p>How does my goal contribute to the organization’s goal — without making the interface visually overwhelming?</p>
+            </article>
+            <article>
+              <h4>Users</h4>
+              <p>CEO, department managers, team managers, team leads, senior and junior employees — each with different access.</p>
+            </article>
+            <article>
+              <h4>What I did</h4>
+              <p>Refined stakeholder requirements, researched goal-setting platforms, and designed flows that showed relationship without dumping the full hierarchy on every screen.</p>
+            </article>
+          </div>
+          <p>The experience let people view organizational and individual goals, understand the mapping, track status, upload evidence of completion, manage approvals by role, and surface completed goals on the employee LMS profile.</p>
+          <p class="outcome">Internal validation confirmed that the designed experience met the expected goal-management requirements while keeping a complex multi-level hierarchy understandable for users. There is no quantified usability metric for this module yet.</p>
+        </div>
+      </details>
+
+      <details id="survey-builder" class="feature-dive">
+        <summary>
+          <span>02</span>
+          <div>
+            <h3>Survey builder</h3>
+            <p>Flexible creation without overwhelm</p>
+          </div>
+          <i data-lucide="chevron-down"></i>
+        </summary>
+        <div class="dive-body">
+          <p class="dive-lead">The LMS had no native survey or feedback system. The aim was a builder that could support LMS, course, pathway and certification feedback — conceptually informed by SurveyMonkey, Google Forms and Microsoft Forms, designed for this ecosystem rather than as a generic form tool.</p>
+          <div class="dive-grid">
+            <article>
+              <h4>The tension</h4>
+              <p>Creators needed flexibility and configuration. Respondents needed simplicity and speed. Those are two different products sharing one module.</p>
+            </article>
+            <article>
+              <h4>Users</h4>
+              <p>Creators: admins, L&amp;D, course authors, managers. Respondents: employees and learners.</p>
+            </article>
+            <article>
+              <h4>What I did</h4>
+              <p>Refined requirements, researched comparable platforms, defined flows, designed and prototyped, and iterated with development on feasibility and internal testing.</p>
+            </article>
+          </div>
+          <p>The module stayed native: creation, question configuration, preview, response collection, and LMS-related feedback use cases — so teams did not have to leave the product to gather input.</p>
+          <p class="outcome">The Survey Builder established a native feedback loop within the LMS, enabling feedback around courses, learning pathways, certifications and the overall learning experience. Specific builder mechanics (branching, question types, drag-and-drop) are omitted here unless the shipped UI included them.</p>
+        </div>
+      </details>
+
+      <details id="reporting" class="feature-dive">
+        <summary>
+          <span>03</span>
+          <div>
+            <h3>Reporting analytics</h3>
+            <p>Data visibility + simplicity under a limited DSL</p>
+          </div>
+          <i data-lucide="chevron-down"></i>
+        </summary>
+        <div class="dive-body">
+          <p class="dive-lead">Reporting already existed — but only per tenant. Super Admins had to switch tenant, view a report, switch again, and assemble the organization picture themselves. The Super Admin persona was around 40–50; the dashboard had to stay straightforward, not clever.</p>
+          <div class="dive-grid">
+            <article>
+              <h4>Constraints</h4>
+              <p>Large organizational data, and a design system with a limited component set. A new dashboard visual language was not an option.</p>
+            </article>
+            <article>
+              <h4>The principle</h4>
+              <p>Don’t redesign the dashboard when the problem can be solved through better filtering.</p>
+            </article>
+            <article>
+              <h4>What I did</h4>
+              <p>Worked with developers on whether the access model was feasible, then designed around those constraints inside the existing DSL.</p>
+            </article>
+          </div>
+          <p>Two dropdowns at the top of the existing dashboard: Tenant (All Tenants or a single tenant) and a dependent Subtenant control. Selecting Tenant A exposes A1 / A2 / A3. The same analytics surface then updates to the chosen organizational level.</p>
+          <p class="outcome">The solution eliminated the need for Super Admins to switch between tenant accounts to review organizational reporting, bringing consolidated and filtered analytics into a single dashboard. Quantified time or click reductions are not claimed here.</p>
+        </div>
+      </details>
+
+      <details id="community" class="feature-dive">
+        <summary>
+          <span>04</span>
+          <div>
+            <h3>Community</h3>
+            <p>Engagement inside a learning product</p>
+          </div>
+          <i data-lucide="chevron-down"></i>
+        </summary>
+        <div class="dive-body">
+          <p class="dive-lead">Community existed so employees would not have to leave the LMS to connect. People used it occasionally, but not often enough — there were too few reasons to return. The answer was not “more social.” It had to become more useful, without turning the LMS into Facebook.</p>
+          <div class="dive-grid">
+            <article>
+              <h4>Groups</h4>
+              <p>Created independently around a topic, or linked to a course so learners could ask questions and discuss the same material. Connect with colleagues became learn with colleagues.</p>
+            </article>
+            <article>
+              <h4>Events</h4>
+              <p>Course launches, knowledge-sharing sessions, and author-led conversations — specific learning moments that give people a reason to come back.</p>
+            </article>
+            <article>
+              <h4>Constraints</h4>
+              <p>Implementation friction showed up around group access rights and Zoom for events. Those were real product constraints, not afterthoughts.</p>
+            </article>
+          </div>
+          <p class="outcome">The features were developed and tested internally, with positive feedback during testing. Internal testing indicated stronger perceived value and satisfaction with the expanded community experience, particularly by connecting community interactions directly to learning activities. Engagement analytics are a later opportunity, not claimed here.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="process" class="case-block shell">
+      <p class="kicker">06 · Process &amp; delivery</p>
+      <div class="case-split">
+        <h2>Research, then feasibility, then the smallest UI that still solved the problem.</h2>
+        <div>
+          <p>Goal setting and surveys started with competitive and pattern research. Reporting started in grooming: could Super Admins even see across tenants? Community started from an engagement diagnosis, not a feature request list.</p>
+          <p>Multiple complex features moved from initial concept through design and development within 2–3 sprint cycles. Design and delivery targets were met for the planned market launch.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="learnings" class="case-block shell">
+      <p class="kicker">07 · Learnings</p>
+      <div class="case-split">
+        <h2>Complexity is a product problem. Screens are how you resolve it.</h2>
+        <div>
+          <p>Joining mid-stream taught me to stabilize requirements before decorating them. Reporting taught me that a small, feasible control can outperform a redesigned dashboard. Community taught me that engagement inside an LMS has to earn its place next to learning, not compete with it.</p>
+          <p>The through-line: own the ambiguity, stay close to engineering, and ship the version that people can actually use.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="case-block shell">
+      <p class="kicker">08 · Visuals</p>
+      <h2>Frames for the work. Screens go in as they are cleared for sharing.</h2>
+      <div class="gallery-grid">
+        <figure><span>Goal hierarchy</span></figure>
+        <figure><span>Goal mapping</span></figure>
+        <figure><span>Survey creation</span></figure>
+        <figure><span>Respondent view</span></figure>
+        <figure><span>Tenant filters</span></figure>
+        <figure><span>Community groups</span></figure>
+        <figure><span>Events</span></figure>
+        <figure><span>Mobile</span></figure>
+      </div>
+    </section>
+
+    <section class="home-contact shell">
+      <h2>Want to walk through<br>the decisions?</h2>
+      <div class="contact-split">
+        <p>Happy to talk through stakeholder alignment, the filters, or how community stayed a learning product.</p>
+        <p>Email is the fastest path. I read every note.</p>
+      </div>
+      <div class="hero-actions contact-actions">
+        <a class="btn-fill" href="mailto:hello@rajtanawade.com"><i data-lucide="mail"></i> Email</a>
+        <a class="btn-ghost" href="index.html#work">Back to work</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <span>© 2026 Raj Tanawade</span>
+    <span>LMS · 2021–2023</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.544.0"></script>
+  <script src="script.js"></script>
+</body>
+</html>

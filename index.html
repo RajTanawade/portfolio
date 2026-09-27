@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Raj Tanawade — Product designer for complex enterprise software.">
+  <title>Raj Tanawade — Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body class="home-page">
+  <header class="home-header">
+    <a class="wordmark" href="#top">RT<span>.</span></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">How I think</a>
+      <a href="#side-quests">Side quests</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle light and dark mode" title="Toggle light/dark mode">
+        <span class="toggle-track">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <span class="toggle-thumb"></span>
+        </span>
+      </button>
+      <a class="header-contact" href="#contact">Contact me</a>
+    </div>
+  </header>
+
+  <div class="hero-band" id="top">
+    <section class="home-hero shell">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="kicker">Raj Tanawade · Product designer</p>
+          <h1 class="hero-title">I design for the people who have to live inside the system.</h1>
+          <p class="hero-lede">I’m Raj, a product designer with 6+ years in enterprise SaaS — EdTech, HRTech, banking, security, and AI. I make the next decision obvious when the product is complicated. Outside work I draw, design graphics, and shoot on a phone.</p>
+          <div class="hero-actions">
+            <a class="btn-fill" href="mailto:hello@rajtanawade.com">
+              <i data-lucide="mail"></i>
+              Contact me
+            </a>
+            <a class="btn-ghost" href="resume.html">
+              <i data-lucide="file-text"></i>
+              Resume
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-proof" aria-label="Selected impact">
+          <img src="assets/maroon_avatar_sticker.png" alt="Raj Tanawade character sticker" class="hero-character-sticker">
+          <article class="impact-card">
+            <p class="impact-stat"><span data-count="6">0</span><small>+</small></p>
+            <p>Years shaping enterprise products people actually have to use every day</p>
+          </article>
+          <article class="impact-card">
+            <p class="impact-stat"><span data-count="17">0</span><small>%</small></p>
+            <p>Usability improvement on the LMS, from internal surveys with real customers</p>
+          </article>
+          <article class="impact-card">
+            <p class="impact-stat"><span data-count="5">0</span></p>
+            <p>Domains covered: EdTech, HRTech, banking, security, and AI products</p>
+          </article>
+          <article class="impact-card">
+            <p class="impact-stat"><span data-count="1">0</span></p>
+            <p>Confidential platform — a shared design language still under NDA</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <main>
+    <section id="work" class="work-section shell">
+      <div class="section-intro">
+        <p class="kicker">Selected work</p>
+        <h2>Projects that <em>made an impact</em></h2>
+        <p>Some work is public in detail. Some is confidential. Both show how I approach product problems.</p>
+      </div>
+
+      <div class="work-companies">
+        <article class="company-row">
+          <div class="company-left">
+            <p class="company-num">01</p>
+            <h3 class="company-name">Learning Management Platform</h3>
+            <p class="company-meta">Employee upskilling<br>Enterprise LMS · Web + Mobile<br>Japanese MNC · 2021–2023</p>
+            <span class="company-tag">Detailed case study</span>
+          </div>
+          <div class="company-right">
+            <a href="lms.html" class="case-card">
+              <div class="case-img lms-mark">
+                <div class="learning-card">
+                  <span>Employee upskilling</span>
+                  <strong>17%<br><small>usability</small></strong>
+                  <i>Goal setting<br>Survey builder<br>Reporting analytics<br>Community</i>
+                </div>
+              </div>
+              <div class="case-body">
+                <div class="case-body-text">
+                  <p class="case-eyebrow">Upfront impact</p>
+                  <p class="case-title">Designed and shipped complex LMS experiences across goals, surveys, analytics and community.</p>
+                  <p class="case-impact">Multiple features moved from concept to development in 2–3 sprint cycles, contributing to a 17% usability improvement from internal customer surveys.</p>
+                  <p class="case-tags"><span>UX Strategy</span><span>Product Design</span><span>Enterprise UX</span><span>Design Systems</span><span>Web</span><span>Mobile</span></p>
+                </div>
+                <span class="case-arrow" aria-hidden="true"><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="company-row">
+          <div class="company-left">
+            <p class="company-num">02</p>
+            <h3 class="company-name">HireCorrecto</h3>
+            <p class="company-meta">Enterprise AI hiring<br>Product UX · Design system · DSL<br>~1 year</p>
+            <span class="company-tag">Detailed case study</span>
+          </div>
+          <div class="company-right">
+            <a href="hirecorrecto.html" class="case-card">
+              <div class="case-img hire-mark">
+                <span>Hiring ecosystem</span>
+                <div class="hire-steps">
+                  <b>Create</b><b>Screen</b><b>Assess</b><b>Interview</b><b>Evaluate</b><b>Hire</b>
+                </div>
+              </div>
+              <div class="case-body">
+                <div class="case-body-text">
+                  <p class="case-eyebrow">Upfront impact</p>
+                  <p class="case-title">How do you make a complex AI hiring ecosystem feel like one coherent product?</p>
+                  <p class="case-impact">Turned evolving workflows, roles and AI capabilities into a shared product language — with a living DSL that could absorb the next requirement without redesigning the platform.</p>
+                  <p class="case-tags"><span>Product UX</span><span>UX Architecture</span><span>Design Systems</span><span>DSL</span><span>Competitive Analysis</span></p>
+                </div>
+                <span class="case-arrow" aria-hidden="true"><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="company-row">
+          <div class="company-left">
+            <p class="company-num">03</p>
+            <h3 class="company-name">Reneq</h3>
+            <p class="company-meta">Sports Equipment Rental<br>&amp; Club Services · Mobile App<br>12 weeks</p>
+            <span class="company-tag">Detailed case study</span>
+          </div>
+          <div class="company-right">
+            <a href="reneq.html" class="case-card">
+              <div class="case-img reneq-mark">
+                <div class="learning-card" style="background:linear-gradient(135deg,#087f8d,#0b3539);border-color:#38d5b0">
+                  <span>Sports &amp; Rentals</span>
+                  <strong style="font-size:22px;line-height:1.2;color:#38d5b0">Reneq<br><small style="color:#fff">25+ screens</small></strong>
+                  <i>Rental Delivery<br>Club Event Booking<br>Member Coaching<br>Inventory System</i>
+                </div>
+              </div>
+              <div class="case-body">
+                <div class="case-body-text">
+                  <p class="case-eyebrow">Upfront impact</p>
+                  <p class="case-title">Access sports equipment and event club services on demand without ownership burden.</p>
+                  <p class="case-impact">Designed an end-to-end ecosystem connecting home-delivered equipment rentals, membership plans, mentor coaching, and event bookings across 12 weeks.</p>
+                  <p class="case-tags"><span>UX Research</span><span>Product Design</span><span>Mobile App</span><span>Swimlane User Flow</span><span>Card Sorting</span></p>
+                </div>
+                <span class="case-arrow" aria-hidden="true"><i data-lucide="chevron-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <article class="company-row">
+          <div class="company-left">
+            <p class="company-num">04</p>
+            <h3 class="company-name">Design language</h3>
+            <p class="company-meta">Design system &amp; DSL<br>Data-rich products</p>
+            <span class="company-tag">Confidential</span>
+          </div>
+          <div class="company-right">
+            <div class="case-card is-locked">
+              <div class="case-img system-mark">
+                <span class="case-nda">Under NDA</span>
+                <span class="system-label">DSL / 01</span>
+                <div class="system-grid"><b>Type</b><b>Input</b><b>Table</b><b>Chart</b></div>
+              </div>
+              <div class="case-body">
+                <div class="case-body-text">
+                  <p class="case-eyebrow">What I can share</p>
+                  <p class="case-title">How do you turn inconsistency into a language teams can build on?</p>
+                  <p class="case-impact">The work was about a dependable system: reusable components, clearer handoff, and less reinvention feature to feature.</p>
+                </div>
+                <span class="case-arrow is-static" aria-hidden="true"><i data-lucide="lock"></i></span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="think-section shell">
+      <p class="kicker">How I think</p>
+      <h2>I’m not interested in making enterprise software look like a consumer app.</h2>
+      <p>I’m interested in helping people understand what matters, make decisions with less friction, and trust the systems they work in. That means respecting the complexity underneath while refusing to make users carry it.</p>
+      <p class="signature">— Raj</p>
+    </section>
+
+    <section id="side-quests" class="quest-section">
+      <div class="shell">
+        <p class="kicker quest-kicker">Side quests</p>
+        <ul class="quest-stats">
+          <li><span>Drawing</span></li>
+          <li><span>Graphic design</span></li>
+          <li><span>Mobile photography</span></li>
+        </ul>
+        <h2 class="quest-headline">I notice the details most people pass by — <em id="questWord">light</em></h2>
+      </div>
+
+      <div class="quest-stage">
+        <div class="quest-viewport">
+          <div class="quest-track">
+            <article class="quest-card">
+              <div class="quest-visual draw-study" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="quest-copy">
+                <p class="kicker">Drawing</p>
+                <h3>Line before polish</h3>
+                <p>Sketching keeps me honest about structure. If it doesn’t work as a drawing, it won’t work as an interface.</p>
+              </div>
+            </article>
+            <article class="quest-card">
+              <div class="quest-visual type-study" aria-hidden="true"><b>Aa</b><span>Type / 02</span></div>
+              <div class="quest-copy">
+                <p class="kicker">Graphic design</p>
+                <h3>Type, contrast, hierarchy</h3>
+                <p>Graphic work is where I practice the same craft I use in products: what to emphasize, what to quiet, and when to stop.</p>
+              </div>
+            </article>
+            <article class="quest-card">
+              <div class="quest-visual photo-study" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="quest-copy">
+                <p class="kicker">Mobile photography</p>
+                <h3>Light, as it happens</h3>
+                <p>Shooting on a phone trains attention. Composition, color, and the small emotional cue that makes a frame feel considered.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="shell quest-controls">
+        <button class="photo-btn" id="questPrev" type="button" aria-label="Previous"><i data-lucide="arrow-left"></i></button>
+        <p>Practices that keep my eye trained when I’m not in Figma.</p>
+        <button class="photo-btn" id="questNext" type="button" aria-label="Next"><i data-lucide="arrow-right"></i></button>
+      </div>
+    </section>
+
+    <section id="contact" class="home-contact shell">
+      <h2>If the problem is complex,<br>that’s a good place to start.</h2>
+      <div class="contact-split">
+        <p>Contact me for full-time roles, product work, or a conversation about a messy system.</p>
+        <p>I read every note. If you’re working through complexity, I want to hear about it.</p>
+      </div>
+      <div class="hero-actions contact-actions">
+        <a class="btn-fill" href="mailto:hello@rajtanawade.com"><i data-lucide="mail"></i> Email</a>
+        <a class="btn-ghost" href="resume.html"><i data-lucide="file-text"></i> Resume</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <span>© 2026 Raj Tanawade</span>
+    <span>Product design, art &amp; curiosity.</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+  <script src="https://unpkg.com/embla-carousel@8.6.0/embla-carousel.umd.js"></script>
+  <script src="https://unpkg.com/lucide@0.544.0"></script>
+  <script src="script.js"></script>
+</body>
+</html>
